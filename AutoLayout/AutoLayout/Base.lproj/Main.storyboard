@@ -18,21 +18,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HrW-3D-vum">
-                                <rect key="frame" x="160" y="200" width="280" height="200"/>
+                                <rect key="frame" x="100" y="20" width="450" height="380"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="gTq-2x-Yum"/>
-                                    <constraint firstAttribute="width" constant="280" id="t1z-9d-Mxl"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="HrW-3D-vum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bsh-AW-Anj"/>
-                            <constraint firstItem="HrW-3D-vum" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Q5R-k8-t86"/>
+                            <constraint firstItem="HrW-3D-vum" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6XI-9m-G0Q"/>
+                            <constraint firstAttribute="trailing" secondItem="HrW-3D-vum" secondAttribute="trailing" constant="50" id="WN8-LK-qNC"/>
+                            <constraint firstItem="HrW-3D-vum" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="crx-G8-Tsb"/>
+                            <constraint firstItem="HrW-3D-vum" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="100" id="plb-Ry-DRY"/>
+                            <constraint firstAttribute="bottom" secondItem="HrW-3D-vum" secondAttribute="bottom" constant="200" id="rlK-IB-oJo"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="crx-G8-Tsb"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
