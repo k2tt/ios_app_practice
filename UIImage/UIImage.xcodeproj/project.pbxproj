@@ -14,6 +14,7 @@
 		B70DD8C31C1F2BC200BDEB16 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B70DD8C11C1F2BC200BDEB16 /* LaunchScreen.storyboard */; };
 		B70DD8CE1C1F2BC200BDEB16 /* UIImageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70DD8CD1C1F2BC200BDEB16 /* UIImageTests.swift */; };
 		B70DD8D91C1F2BC200BDEB16 /* UIImageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70DD8D81C1F2BC200BDEB16 /* UIImageUITests.swift */; };
+		B70DD8E71C20788700BDEB16 /* animals.png in Resources */ = {isa = PBXBuildFile; fileRef = B70DD8E61C20788700BDEB16 /* animals.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B70DD8D41C1F2BC200BDEB16 /* UIImageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIImageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B70DD8D81C1F2BC200BDEB16 /* UIImageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageUITests.swift; sourceTree = "<group>"; };
 		B70DD8DA1C1F2BC200BDEB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B70DD8E61C20788700BDEB16 /* animals.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animals.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				B70DD8B81C1F2BC200BDEB16 /* AppDelegate.swift */,
 				B70DD8BA1C1F2BC200BDEB16 /* ViewController.swift */,
 				B70DD8BC1C1F2BC200BDEB16 /* Main.storyboard */,
+				B70DD8E61C20788700BDEB16 /* animals.png */,
 				B70DD8BF1C1F2BC200BDEB16 /* Assets.xcassets */,
 				B70DD8C11C1F2BC200BDEB16 /* LaunchScreen.storyboard */,
 				B70DD8C41C1F2BC200BDEB16 /* Info.plist */,
@@ -232,6 +235,7 @@
 				B70DD8C31C1F2BC200BDEB16 /* LaunchScreen.storyboard in Resources */,
 				B70DD8C01C1F2BC200BDEB16 /* Assets.xcassets in Resources */,
 				B70DD8BE1C1F2BC200BDEB16 /* Main.storyboard in Resources */,
+				B70DD8E71C20788700BDEB16 /* animals.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

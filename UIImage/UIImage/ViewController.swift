@@ -9,10 +9,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var myImageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        //画像を設定
+        myImageView.image = UIImage(named: "animals.png")
+        
+        //表示モードの設定
+        myImageView.contentMode = UIViewContentMode.ScaleAspectFill
+        
+        //表示領域で画像が切り抜かれる
+        myImageView.clipsToBounds = true
     }
 
     override func didReceiveMemoryWarning() {
