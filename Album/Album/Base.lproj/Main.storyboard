@@ -16,6 +16,37 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="eDs-Dd-nsV">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="302"/>
+                                <animations/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10.png" translatesAutoresizingMaskIntoConstraints="NO" id="8SF-K0-UgA">
+                                <rect key="frame" x="250" y="0.0" width="125" height="302"/>
+                                <animations/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11.png" translatesAutoresizingMaskIntoConstraints="NO" id="Anw-AL-Eeb">
+                                <rect key="frame" x="0.0" y="302" width="375" height="135"/>
+                                <animations/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="12.png" translatesAutoresizingMaskIntoConstraints="NO" id="c0r-Ii-Pug">
+                                <rect key="frame" x="0.0" y="437" width="120" height="165"/>
+                                <animations/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="13.png" translatesAutoresizingMaskIntoConstraints="NO" id="B5y-e7-6fC">
+                                <rect key="frame" x="120" y="437" width="255" height="165"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ip6-B3-Qtm">
+                                <rect key="frame" x="0.0" y="602" width="375" height="65"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.043137254901960784" green="0.30588235294117649" blue="0.62796050467166742" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
+                                <state key="normal" title="Tap Me!!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -25,4 +56,11 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="1.png" width="603" height="400"/>
+        <image name="10.png" width="602" height="400"/>
+        <image name="11.png" width="607" height="400"/>
+        <image name="12.png" width="603" height="400"/>
+        <image name="13.png" width="601" height="400"/>
+    </resources>
 </document>
