@@ -17,40 +17,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="eDs-Dd-nsV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1.png" translatesAutoresizingMaskIntoConstraints="NO" id="eDs-Dd-nsV">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="302"/>
                                 <animations/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="10.png" translatesAutoresizingMaskIntoConstraints="NO" id="8SF-K0-UgA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="10.png" translatesAutoresizingMaskIntoConstraints="NO" id="8SF-K0-UgA">
                                 <rect key="frame" x="250" y="0.0" width="125" height="302"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="tZ8-sL-rVb"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="11.png" translatesAutoresizingMaskIntoConstraints="NO" id="Anw-AL-Eeb">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11.png" translatesAutoresizingMaskIntoConstraints="NO" id="Anw-AL-Eeb">
                                 <rect key="frame" x="0.0" y="302" width="375" height="135"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="135" id="oPN-fM-HU5"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="12.png" translatesAutoresizingMaskIntoConstraints="NO" id="c0r-Ii-Pug">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="12.png" translatesAutoresizingMaskIntoConstraints="NO" id="c0r-Ii-Pug">
                                 <rect key="frame" x="0.0" y="437" width="120" height="165"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="6rP-8n-f2p"/>
+                                    <constraint firstAttribute="height" constant="165" id="U7w-jj-CPu"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="13.png" translatesAutoresizingMaskIntoConstraints="NO" id="B5y-e7-6fC">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="13.png" translatesAutoresizingMaskIntoConstraints="NO" id="B5y-e7-6fC">
                                 <rect key="frame" x="120" y="437" width="255" height="165"/>
                                 <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="165" id="uG5-dY-pPh"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ip6-B3-Qtm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ip6-B3-Qtm">
                                 <rect key="frame" x="0.0" y="602" width="375" height="65"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.043137254901960784" green="0.30588235294117649" blue="0.62796050467166742" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="H13-fy-1r9"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Tap Me!!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="tapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d9B-nA-66e"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ip6-B3-Qtm" firstAttribute="top" secondItem="c0r-Ii-Pug" secondAttribute="bottom" id="4dh-ac-PX4"/>
+                            <constraint firstItem="8SF-K0-UgA" firstAttribute="leading" secondItem="eDs-Dd-nsV" secondAttribute="trailing" id="7ZR-fi-wRx"/>
+                            <constraint firstItem="8SF-K0-UgA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8U4-ea-SIz"/>
+                            <constraint firstAttribute="trailing" secondItem="Anw-AL-Eeb" secondAttribute="trailing" id="EKb-eY-gjS"/>
+                            <constraint firstItem="Anw-AL-Eeb" firstAttribute="top" secondItem="8SF-K0-UgA" secondAttribute="bottom" id="IId-sM-Umi"/>
+                            <constraint firstItem="B5y-e7-6fC" firstAttribute="top" secondItem="Anw-AL-Eeb" secondAttribute="bottom" id="KeW-BO-PVl"/>
+                            <constraint firstItem="Anw-AL-Eeb" firstAttribute="top" secondItem="eDs-Dd-nsV" secondAttribute="bottom" id="Kgq-R8-Tiv"/>
+                            <constraint firstAttribute="trailing" secondItem="Ip6-B3-Qtm" secondAttribute="trailing" id="LQJ-en-mCa"/>
+                            <constraint firstAttribute="trailing" secondItem="8SF-K0-UgA" secondAttribute="trailing" id="P8T-R4-Nli"/>
+                            <constraint firstItem="Anw-AL-Eeb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TuV-hQ-h5K"/>
+                            <constraint firstItem="B5y-e7-6fC" firstAttribute="leading" secondItem="c0r-Ii-Pug" secondAttribute="trailing" id="Y0r-xk-TTb"/>
+                            <constraint firstItem="c0r-Ii-Pug" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aSL-Bd-kgg"/>
+                            <constraint firstItem="Ip6-B3-Qtm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fms-mR-lU9"/>
+                            <constraint firstItem="eDs-Dd-nsV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gL7-gY-owU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ip6-B3-Qtm" secondAttribute="bottom" id="o9i-l3-WSg"/>
+                            <constraint firstAttribute="trailing" secondItem="B5y-e7-6fC" secondAttribute="trailing" id="q8p-wX-9SJ"/>
+                            <constraint firstItem="Ip6-B3-Qtm" firstAttribute="top" secondItem="B5y-e7-6fC" secondAttribute="bottom" id="t7K-Ya-8Pi"/>
+                            <constraint firstItem="eDs-Dd-nsV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yaM-vq-Gsr"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView1" destination="eDs-Dd-nsV" id="gzd-od-CZ7"/>
+                        <outlet property="imageView2" destination="8SF-K0-UgA" id="3y2-ac-iKQ"/>
+                        <outlet property="imageView3" destination="Anw-AL-Eeb" id="yZJ-RK-wTw"/>
+                        <outlet property="imageView4" destination="c0r-Ii-Pug" id="04I-tT-Ykn"/>
+                        <outlet property="imageView5" destination="B5y-e7-6fC" id="Em0-J4-eDl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
