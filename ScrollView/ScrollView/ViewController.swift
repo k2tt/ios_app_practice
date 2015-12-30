@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        myScrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height)
+        myScrollView.contentSize = CGSizeMake(1000, 1000)
         
         //UIImageViewクラスのインスンタンスを生成
         let myImageView = UIImageView()
