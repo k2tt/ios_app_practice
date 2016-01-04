@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerScrollView: UIScrollView!
@@ -25,19 +25,35 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource  = self
+        headerScrollView.delegate = self
         
         //セルの高さを自動で計算
         self.tableView.estimatedRowHeight = 93
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        headerScrollView.contentSize = CGSize(width: 2000, height: 190)
+        headerScrollView.contentSize = CGSize(width: self.view.frame.width * 2, height: headerScrollView.frame.height)
         
         setProfileImageView()
+        
+        let profileLabel = makeProfileLabel()
+        headerScrollView.addSubview(profileLabel)
+        
+        //表示範囲でページをめくるようにスクロールするための設定
+        headerScrollView.pagingEnabled = true
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    /**
+     * scrollViewDidScroll
+     */
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        headerScrollView.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: headerScrollView.contentOffset.x * 0.6 / self.view.frame.width)
+        //デバックエリアにScrollViewのcontentOffsetを出力
+        //print("contentOffset: \(headerScrollView.contentOffset)")
     }
 
     // TableViewの処理 -----------------------------
@@ -268,5 +284,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         profileImageView.layer.borderWidth = 2
         profileImageView.layer.borderColor = UIColor.whiteColor().CGColor
     }
+    
+    /**
+     * プロフィールテキスト生成
+     */
+    func makeProfileLabel() -> UILabel {
+        let profileLabel = UILabel()
+        profileLabel.frame.size = CGSizeMake(200, 100)
+        profileLabel.center.x = self.view.frame.width*3/2
+        profileLabel.center.y = headerScrollView.center.y-64
+        profileLabel.text = "きのこだよ。好きなきのこはしめじで、嫌いなきのこはアミウダケです。よろしくね。"
+        profileLabel.font = UIFont(name: "HirakakuProN-W6", size: 13)
+        profileLabel.textColor = UIColor.whiteColor()
+        profileLabel.textAlignment = NSTextAlignment.Center
+        profileLabel.numberOfLines = 0
+        return profileLabel
+    }
+    
 }
 
