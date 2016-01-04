@@ -8,27 +8,75 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerScrollView: UIScrollView!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    let bgView = UIView()
+    let textField = UITextField()
+    let textView = UITextView()
+    
+    var tweetArray: Array<Dictionary<String, String>> = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        tableView.delegate = self
+        tableView.dataSource  = self
+        
+        //セルの高さを自動で計算
+        self.tableView.estimatedRowHeight = 93
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        headerScrollView.contentSize = CGSize(width: 2000, height: 190)
+        
+        setProfileImageView()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    let bgView = UIView()
-    let textField = UITextField()
-    let textView = UITextView()
 
     // TableViewの処理 -----------------------------
 
     /**
-     *
+     * セクション数
      */
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tweetArray.count
+    }
+
+    /**
+     * セルの Identifier をコードとひも付け
+     */
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("myCell")!
+        let tweet = tweetArray[indexPath.row]
+        
+        let nameLabel = cell.viewWithTag(1) as! UILabel
+        nameLabel.text = tweet["name"]
+        nameLabel.font = UIFont(name: "HirakakuProN-W6", size: 13)
+        
+        let textLabel = cell.viewWithTag(2) as! UILabel
+        textLabel.text = tweet["text"]
+        textLabel.font = UIFont(name: "HirakakuProN-W6", size: 18)
+        textLabel.numberOfLines = 0
+        
+        let timeLabel = cell.viewWithTag(3) as! UILabel
+        timeLabel.text = tweet["time"]
+        timeLabel.font = UIFont(name: "HirakakuProN-W3", size: 10)
+        timeLabel.textColor = UIColor.grayColor()
+        
+        let myImageView = cell.viewWithTag(4) as! UIImageView
+        myImageView.image = UIImage(named: "pug")
+        myImageView.layer.cornerRadius = 3
+        myImageView.layer.masksToBounds = true
+        
+        return cell
+    }
      
      
     // ボタンがタップされた時の処理 -----------------------------
@@ -52,10 +100,10 @@ class ViewController: UIViewController {
         let textView = makeTextView()
         twView.addSubview(textView)
         
-        let nameLabel = makeLabel("名前", y: 5)
+        let nameLabel = makeLabel("名前", y: 18)
         twView.addSubview(nameLabel)
         
-        let tweetLabel = makeLabel("ツイート内容", y: 85)
+        let tweetLabel = makeLabel("ツイート内容", y: 98)
         twView.addSubview(tweetLabel)
         
         let cancelBtn = makeCancelBtn(twView)
@@ -77,15 +125,44 @@ class ViewController: UIViewController {
      * tappedSubmitBtn
      */
     func tappedSubmitBtn(sender: AnyObject){
-        let name = textField.text!
-        let tweet = textView.text
-        print("名前:\(name)、ツイート内容:\(tweet)")
         
-        textField.text = ""
-        textView.text = ""
-        bgView.removeFromSuperview()
+        if (textField.text!.isEmpty) || (textView.text.isEmpty){
+            let alertController = UIAlertController(title: "Error", message: "'name' or 'text' is empty", preferredStyle: UIAlertControllerStyle.Alert)
+            let action = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+            alertController.addAction(action)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
+        else {
+            let name = textField.text!
+            let tweet = textView.text
+            //print("名前:\(name)、ツイート内容:\(tweet)")
+            
+            var tweetDic: Dictionary<String, String> = [:]
+            tweetDic["name"] = name
+            tweetDic["text"] = tweet
+            tweetDic["time"] = getCurrentTime()
+            //tweetArray.append(tweetDic) //appendでは最後に追加されてしまう
+            tweetArray.insert(tweetDic, atIndex: 0)
+        
+            textField.text = ""
+            textView.text = ""
+            bgView.removeFromSuperview()
+            tableView.reloadData()
+        }
     }
 
+    /**
+     * 現在時刻を取得
+     */
+    func getCurrentTime() -> String {
+        let now = NSDate() // 現在日時の取得
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.timeStyle = .ShortStyle
+        dateFormatter.dateStyle = .ShortStyle
+        let currentTime = dateFormatter.stringFromDate(now)
+        return currentTime
+    }
+    
     
     // 部品生成処理 -----------------------------
     
@@ -181,6 +258,15 @@ class ViewController: UIViewController {
         submitBtn.layer.cornerRadius = 7
         submitBtn.addTarget(self, action: "tappedSubmitBtn:", forControlEvents: .TouchUpInside)
         return submitBtn
+    }
+
+    /**
+     * プロフィール画像装飾
+     */
+    func setProfileImageView() {
+        profileImageView.layer.cornerRadius = 5
+        profileImageView.layer.borderWidth = 2
+        profileImageView.layer.borderColor = UIColor.whiteColor().CGColor
     }
 }
 
