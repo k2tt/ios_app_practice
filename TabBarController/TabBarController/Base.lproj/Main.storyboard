@@ -72,7 +72,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="vLC-gn-pu5">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wdh-pg-Trn" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wdh-pg-Trn" customClass="TabBarController" customModule="TabBarController" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="EE8-mG-g2B">

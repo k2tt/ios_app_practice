@@ -14,6 +14,7 @@
 		B75325AC1C4804A000BAD592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B75325AA1C4804A000BAD592 /* LaunchScreen.storyboard */; };
 		B75325B71C4804A000BAD592 /* TabBarControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75325B61C4804A000BAD592 /* TabBarControllerTests.swift */; };
 		B75325C21C4804A000BAD592 /* TabBarControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75325C11C4804A000BAD592 /* TabBarControllerUITests.swift */; };
+		B75325D01C4BDE4200BAD592 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75325CF1C4BDE4200BAD592 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		B75325BD1C4804A000BAD592 /* TabBarControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabBarControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75325C11C4804A000BAD592 /* TabBarControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerUITests.swift; sourceTree = "<group>"; };
 		B75325C31C4804A000BAD592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B75325CF1C4BDE4200BAD592 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				B75325A11C4804A000BAD592 /* AppDelegate.swift */,
 				B75325A31C4804A000BAD592 /* ViewController.swift */,
 				B75325A51C4804A000BAD592 /* Main.storyboard */,
+				B75325CF1C4BDE4200BAD592 /* TabBarController.swift */,
 				B75325A81C4804A000BAD592 /* Assets.xcassets */,
 				B75325AA1C4804A000BAD592 /* LaunchScreen.storyboard */,
 				B75325AD1C4804A000BAD592 /* Info.plist */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B75325D01C4BDE4200BAD592 /* TabBarController.swift in Sources */,
 				B75325A41C4804A000BAD592 /* ViewController.swift in Sources */,
 				B75325A21C4804A000BAD592 /* AppDelegate.swift in Sources */,
 			);
