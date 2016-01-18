@@ -14,6 +14,12 @@ class TabBarController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //指定する色を定義
+        let blue = UIColor(red: 11.0 / 255, green: 78.0 / 255, blue: 160.0 / 255, alpha: 1.0)
+        
+        //Tab Barの背景色を設定
+        UITabBar.appearance().barTintColor = blue
     }
 
     override func didReceiveMemoryWarning() {
