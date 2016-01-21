@@ -20,6 +20,7 @@ class TabBarController: UITabBarController {
         
         //Tab Barの背景色を設定
         UITabBar.appearance().barTintColor = blue
+        UITabBar.appearance().translucent  = false
     }
 
     override func didReceiveMemoryWarning() {
