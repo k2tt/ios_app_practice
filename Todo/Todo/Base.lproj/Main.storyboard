@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Todo一覧-->
         <scene sceneID="gny-ma-s6Y">
             <objects>
                 <tableViewController id="NDn-Tx-IL8" sceneMemberID="viewController">
@@ -28,7 +28,7 @@
                             <outlet property="delegate" destination="NDn-Tx-IL8" id="fa9-6f-bvc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BWV-7Q-aqK"/>
+                    <navigationItem key="navigationItem" title="Todo一覧" id="BWV-7Q-aqK"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KaO-Sx-vff" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -44,6 +44,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9iB-lz-LhH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
