@@ -8,7 +8,7 @@
         <!--Todo一覧-->
         <scene sceneID="gny-ma-s6Y">
             <objects>
-                <tableViewController id="NDn-Tx-IL8" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="TodoListTableViewController" id="NDn-Tx-IL8" customClass="TodoListTableViewController" customModule="Todo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jha-ue-eIP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
