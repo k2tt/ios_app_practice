@@ -13,10 +13,10 @@ class TodoCollection: NSObject {
 
     func fetchTodos() {
         // Todoのインスタンス生成
-        let todo = Todo()
         for (var i = 0; i < 7; i++) {
+            let todo = Todo()
             // タイトルの設定
-            todo.title = "Todo1"
+            todo.title = "Todo\(i + 1)"
             // 配列todosに追加
             self.todos.append(todo)
         }

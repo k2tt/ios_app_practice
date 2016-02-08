@@ -45,7 +45,9 @@ class TodoListTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
         
-        cell.textLabel!.text = "セクション\(indexPath.section)の\(indexPath.row)行目"
+        let todo = self.todoCollection.todos[indexPath.row]
+        cell.textLabel!.text = todo.title
+        cell.textLabel!.font = UIFont(name: "HirakakuProN-W3", size: 15)
         
         return cell
     }
