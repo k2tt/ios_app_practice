@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B79EDA561C70E125004481EE /* NewTodoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B79EDA551C70E125004481EE /* NewTodoViewController.swift */; };
 		B7E503901C5A862C00A9E7FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E5038F1C5A862C00A9E7FF /* AppDelegate.swift */; };
 		B7E503951C5A862C00A9E7FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7E503931C5A862C00A9E7FF /* Main.storyboard */; };
 		B7E503971C5A862C00A9E7FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7E503961C5A862C00A9E7FF /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B79EDA551C70E125004481EE /* NewTodoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTodoViewController.swift; sourceTree = "<group>"; };
 		B7E5038C1C5A862C00A9E7FF /* Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7E5038F1C5A862C00A9E7FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7E503941C5A862C00A9E7FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				B7E503BD1C5E71C000A9E7FF /* TodoListTableViewController.swift */,
+				B79EDA551C70E125004481EE /* NewTodoViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				B7E503901C5A862C00A9E7FF /* AppDelegate.swift in Sources */,
 				B7E503C51C676BB800A9E7FF /* TodoCollection.swift in Sources */,
 				B7E503C31C62718500A9E7FF /* Todo.swift in Sources */,
+				B79EDA561C70E125004481EE /* NewTodoViewController.swift in Sources */,
 				B7E503BE1C5E71C000A9E7FF /* TodoListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -516,6 +520,7 @@
 				B7E503B61C5A862C00A9E7FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7E503B71C5A862C00A9E7FF /* Build configuration list for PBXNativeTarget "TodoTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +529,7 @@
 				B7E503B91C5A862C00A9E7FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7E503BA1C5A862C00A9E7FF /* Build configuration list for PBXNativeTarget "TodoUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +538,7 @@
 				B7E503BC1C5A862C00A9E7FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

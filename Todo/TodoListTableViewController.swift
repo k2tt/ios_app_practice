@@ -52,6 +52,16 @@ class TodoListTableViewController: UITableViewController {
         return cell
     }
 
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController!.navigationBar.tintColor = UIColor.blackColor()
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "新規作成", style: UIBarButtonItemStyle.Plain, target: self, action: "newTodo")
+    }
+
+    func newTodo() {
+        self.performSegueWithIdentifier("PresentNewTodoViewController", sender: self)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
