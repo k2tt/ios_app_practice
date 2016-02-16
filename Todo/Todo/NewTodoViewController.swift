@@ -48,6 +48,7 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
     }
     
     func save() {
+        let todo = Todo()
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
