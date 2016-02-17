@@ -49,6 +49,9 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
     
     func save() {
         let todo = Todo()
+        todo.title = todoField.text!
+        todo.descript = descriptionView.text
+        todo.priority = TodoPriority(rawValue: prioritySegment.selectedSegmentIndex)!
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
