@@ -9,6 +9,9 @@
 import UIKit
 
 class TodoCollection: NSObject {
+    
+    //TodoCollectionクラスのインスタンスをシングルトンな変数として再定義
+    static let sharedInstance = TodoCollection()
     var todos:[Todo] = []
 
     func fetchTodos() {
@@ -21,4 +24,9 @@ class TodoCollection: NSObject {
             self.todos.append(todo)
         }
     }
+
+    func addTodoCollection(todo: Todo){
+        self.todos.append(todo)
+    }
+    
 }

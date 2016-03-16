@@ -13,7 +13,7 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var todoField: UITextField!
     @IBOutlet weak var descriptionView: UITextView!
     @IBOutlet weak var prioritySegment: UISegmentedControl!
-    
+    let todoCollection = TodoCollection.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,6 +58,8 @@ class NewTodoViewController: UIViewController, UITextFieldDelegate {
             todo.title = todoField.text!
             todo.descript = descriptionView.text
             todo.priority = TodoPriority(rawValue: prioritySegment.selectedSegmentIndex)!
+            self.todoCollection.addTodoCollection(todo)
+            print(self.todoCollection.todos)
             self.dismissViewControllerAnimated(true, completion: nil)
         }
     }
