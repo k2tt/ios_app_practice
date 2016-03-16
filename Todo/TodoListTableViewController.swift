@@ -10,13 +10,14 @@ import UIKit
 
 class TodoListTableViewController: UITableViewController {
     
-    let todoCollection = TodoCollection()
+    let todoCollection = TodoCollection.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.todoCollection.fetchTodos()
-        //print(self.todoCollection.todos)
+        
+        // self.todoCollection.fetchTodos()
+        // print(self.todoCollection.todos)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -56,6 +57,7 @@ class TodoListTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         self.navigationController!.navigationBar.tintColor = UIColor.blackColor()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "新規作成", style: UIBarButtonItemStyle.Plain, target: self, action: "newTodo")
+        self.tableView.reloadData()
     }
 
     func newTodo() {
